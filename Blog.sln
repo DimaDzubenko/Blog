@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.UI", "Blog.UI\Blog.UI.csproj", "{FDF5CC18-35F5-4D40-9529-DFC607FF57B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.UI", "Blog.UI\Blog.UI.csproj", "{FDF5CC18-35F5-4D40-9529-DFC607FF57B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DataLayer", "Blog.DataLayer\Blog.DataLayer.csproj", "{536D4801-96FC-461E-B9BD-DA010B8BBDA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.DataLayer", "Blog.DataLayer\Blog.DataLayer.csproj", "{536D4801-96FC-461E-B9BD-DA010B8BBDA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.BussinesLayer", "Blog.BussinesLayer\Blog.BussinesLayer.csproj", "{C1865251-91EE-450B-8968-D1FC3CE67C2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.BussinesLayer", "Blog.BussinesLayer\Blog.BussinesLayer.csproj", "{C1865251-91EE-450B-8968-D1FC3CE67C2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

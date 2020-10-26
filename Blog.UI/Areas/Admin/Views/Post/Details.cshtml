@@ -1,0 +1,25 @@
+﻿@model Blog.UI.Models.ViewModels.PostViewModel
+
+@{
+    ViewData["Title"] = "post details";
+}
+
+<h3>@Model.Title</h3>
+<div>
+    <hr />
+    <div>
+        @if (ViewBag.Image != null)
+        {
+            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(ViewBag.Image))" alt="blog" class="img-responsive center-block">
+        }
+        else
+        {
+            <img src="~images/blog/images/img-content-v2_03.jpg" alt="blog" class="img-responsive center-block">
+        }
+    </div>
+    @Html.Raw(Model.Content)
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PostId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

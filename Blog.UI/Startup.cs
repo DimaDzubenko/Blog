@@ -26,7 +26,7 @@ namespace Blog.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Connection string to DB
+            // Connection string with DB
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             // 
             services.AddScoped<IService<PostDTO>, PostService>();
@@ -58,6 +58,12 @@ namespace Blog.UI
 
             app.UseEndpoints(endpoints =>
             {
+                // Route for admin area.
+                endpoints.MapAreaControllerRoute(
+                    name: "admin_area",
+                    areaName: "admin",
+                    pattern: "admin/{controller=Admin}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
