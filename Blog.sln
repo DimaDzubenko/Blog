@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.UI", "Blog.UI\Blog.UI.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.DataLayer", "Blog.DataLayer\Blog.DataLayer.csproj", "{536D4801-96FC-461E-B9BD-DA010B8BBDA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.BussinesLayer", "Blog.BussinesLayer\Blog.BussinesLayer.csproj", "{C1865251-91EE-450B-8968-D1FC3CE67C2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{536D4801-96FC-461E-B9BD-DA010B8BBDA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{536D4801-96FC-461E-B9BD-DA010B8BBDA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{536D4801-96FC-461E-B9BD-DA010B8BBDA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1865251-91EE-450B-8968-D1FC3CE67C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1865251-91EE-450B-8968-D1FC3CE67C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1865251-91EE-450B-8968-D1FC3CE67C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1865251-91EE-450B-8968-D1FC3CE67C2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
