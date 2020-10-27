@@ -7,6 +7,7 @@ using Blog.DataLayer.Models;
 using Blog.DataLayer.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,8 +27,18 @@ namespace Blog.UI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Connection string with DB
+            // Connection string for DB
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            // Identity
+            services.AddIdentity<User, IdentityRole>(opts =>
+            {
+                opts.Password.RequiredLength = 8;   // minimum length password
+                opts.Password.RequireNonAlphanumeric = true;   // whether alphanumeric characters are used in the password
+                opts.Password.RequireLowercase = true; // are lowercase characters used in the password
+                opts.Password.RequireUppercase = true; // are uppercase characters used in the password
+                opts.Password.RequireDigit = true; // are numbers used in the password
+            })
+                .AddEntityFrameworkStores<ApplicationDbContext>();
             // 
             services.AddScoped<IService<PostDTO>, PostService>();
             //
@@ -51,9 +62,8 @@ namespace Blog.UI
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

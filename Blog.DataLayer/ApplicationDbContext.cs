@@ -1,4 +1,5 @@
 ﻿using Blog.DataLayer.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blog.DataLayer
@@ -6,7 +7,7 @@ namespace Blog.DataLayer
     /// <summary>
     /// 
     /// </summary>
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<User>
     {
         /// <summary>
         /// 
